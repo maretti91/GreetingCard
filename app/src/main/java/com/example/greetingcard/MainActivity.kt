@@ -32,20 +32,21 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
+@Composable // Define un componente de interfaz.
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Surface(color=Color.Cyan) {
+    Surface(color = Color.Cyan) { // Establece el fondo cian.
         Text(
-            text = "Hi, my name is $name!",
-            modifier = modifier.padding(24.dp)
+            text = "Hi, my name is $name!", // Muestra el mensaje.
+            modifier = modifier.padding(24.dp) // Añade 24 dp de espacio interior.
         )
     }
 }
 
-@Preview(showBackground = true)
-@Composable
+
+@Preview(showBackground = true) // Activa la vista previa.
+@Composable // Define un componente de interfaz.
 fun GreetingPreview() {
-    GreetingCardTheme {
-        Greeting("MARETTI")
+    GreetingCardTheme { // Aplica el tema visual.
+        Greeting("Maretti") // Envía el nombre a la función Greeting.
     }
 }
